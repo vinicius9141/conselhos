@@ -1,0 +1,25 @@
+@import "../../../config-scss/remc-calc.scss";
+@import "../../../config-scss/variables.scss";
+:host {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    height: remc(60);
+
+    ul {
+      display: flex;
+
+      li {
+        padding-right: remc(30);
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
