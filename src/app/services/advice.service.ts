@@ -14,4 +14,8 @@ export class AdviceService {
   public getRandomAdvice(): Observable<any> {
     return this.http.get<any>(this.api);
   }
+
+  public getAdviceByNumber(id: string): Observable<any> {
+    return this.http.get<any>(`${this.api}/${id}`);
+  }
 }
