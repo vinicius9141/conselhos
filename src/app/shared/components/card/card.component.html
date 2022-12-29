@@ -1,7 +1,12 @@
 <div class="container">
   <div class="title">Conselho do dia</div>
-  <div class="msg-card">{{ adviceRandom }}</div>
-  <button style="height: 12vw; margin-top: 3vw" (click)="getAdvice()">
-    Disparar Função
-  </button>
+  <div class="msg-card">{{ adviceRandom || AdviceByLuckyNumber }}</div>
+  <button class="advice-button" (click)="getAdvice()">Novo Conselho</button>
+
+  <div class="lucky-number" *ngIf="changeStatsService.changeStatInput">
+    <input class="input-advice" type="number" [(ngModel)]="idAdvice" />
+    <button class="advice-button" (click)="getAdviceNumber()">
+      Meu Numero
+    </button>
+  </div>
 </div>

@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: var(--secondary-color);
+    background: #603587;
     height: remc(60);
 
     ul {
@@ -16,8 +16,9 @@
         padding-right: remc(30);
 
         a {
-          color: black;
+          color: var(--white);
           text-decoration: none;
+          font-size: remc(20);
         }
       }
     }

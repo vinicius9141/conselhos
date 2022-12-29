@@ -14,11 +14,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(0, 0, 0, 0.4);
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
       padding: 3vw 18vw 3vw 18vw;
       border-radius: remc(15);
+      font-size: remc(30);
+
+      @media only screen and (max-width: 768px) {
+        font-size: remc(24);
+      }
     }
 
     .msg-card {
@@ -26,7 +31,7 @@
       align-items: center;
       justify-content: center;
       margin-top: remc(75);
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(0, 0, 0, 0.4);
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
       padding: 7vw 18vw 7vw 18vw;
@@ -34,6 +39,67 @@
       min-width: 20vw;
       border-radius: remc(15);
       text-align: center;
+      font-size: remc(30);
+      margin-bottom: remc(30);
+
+      @media only screen and (max-width: 768px) {
+        font-size: remc(24);
+      }
+    }
+
+    .input-advice {
+      padding: 13px;
+      font-size: 16px;
+      font-weight: 700;
+      border-color: #ff0000;
+      background-color: #ffffff;
+      color: #000000;
+      border-style: hidden;
+      border-radius: 0px;
+    }
+    .input-advice:focus {
+      outline: none;
+    }
+
+    .advice-button {
+      background: linear-gradient(to bottom, #464185 5%, #6c3f80 100%);
+      background-color: #464185;
+      border-radius: 8px;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 20px;
+      padding: 13px 32px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #8a3e7b;
+
+      &:hover {
+        background: linear-gradient(to bottom, #6c3f80 5%, #464185 100%);
+        background-color: #6c3f80;
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    .lucky-number {
+      display: flex;
+      align-items: center;
+      margin-top: remc(30);
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
     }
   }
 }
